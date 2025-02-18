@@ -4,9 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.animation.AnimationUtils
+import android.view.animation.Animation
+import android.view.animation.RotateAnimation
 import androidx.fragment.app.Fragment
-import com.example.ssaver.R
 import com.example.ssaver.databinding.FragmentHelpBinding
 
 class HelpFragment : Fragment() {
@@ -29,32 +29,77 @@ class HelpFragment : Fragment() {
     }
 
     private fun setupExpandableCards() {
-        // How to save card
-        binding.headerHowToSave.setOnClickListener {
-            toggleContent(binding.contentHowToSave, binding.arrowHowToSave)
+        // Interface section
+        binding.headerInterface.setOnClickListener {
+            toggleSection(
+                binding.contentInterface,
+                binding.arrowInterface
+            )
         }
 
-        // Permissions card
-        binding.headerPermissions.setOnClickListener {
-            toggleContent(binding.contentPermissions, binding.arrowPermissions)
+        // Images section
+        binding.headerImages.setOnClickListener {
+            toggleSection(
+                binding.contentImages,
+                binding.arrowImages
+            )
         }
 
-        // Not showing card
-        binding.headerNotShowing.setOnClickListener {
-            toggleContent(binding.contentNotShowing, binding.arrowNotShowing)
+        // Videos section
+        binding.headerVideos.setOnClickListener {
+            toggleSection(
+                binding.contentVideos,
+                binding.arrowVideos
+            )
+        }
+
+        // Managing Files section
+        binding.headerManage.setOnClickListener {
+            toggleSection(
+                binding.contentManage,
+                binding.arrowManage
+            )
+        }
+
+        // Troubleshooting section
+        binding.headerTroubleshoot.setOnClickListener {
+            toggleSection(
+                binding.contentTroubleshoot,
+                binding.arrowTroubleshoot
+            )
+        }
+
+        // Business Support section
+        binding.headerBusiness.setOnClickListener {
+            toggleSection(
+                binding.contentBusiness,
+                binding.arrowBusiness
+            )
         }
     }
 
-    private fun toggleContent(content: View, arrow: View) {
-        if (content.visibility == View.GONE) {
-            // Expand
-            content.visibility = View.VISIBLE
-            arrow.animate().rotation(180f).setDuration(300).start()
-        } else {
-            // Collapse
+    private fun toggleSection(content: View, arrow: View) {
+        // Toggle content visibility with animation
+        if (content.visibility == View.VISIBLE) {
             content.visibility = View.GONE
-            arrow.animate().rotation(0f).setDuration(300).start()
+            rotateArrow(arrow, 0f)
+        } else {
+            content.visibility = View.VISIBLE
+            rotateArrow(arrow, 180f)
         }
+    }
+
+    private fun rotateArrow(arrow: View, degree: Float) {
+        val currentRotation = if (degree == 0f) 180f else 0f
+        val anim = RotateAnimation(
+            currentRotation, degree,
+            Animation.RELATIVE_TO_SELF, 0.5f,
+            Animation.RELATIVE_TO_SELF, 0.5f
+        ).apply {
+            duration = 300
+            fillAfter = true
+        }
+        arrow.startAnimation(anim)
     }
 
     override fun onDestroyView() {

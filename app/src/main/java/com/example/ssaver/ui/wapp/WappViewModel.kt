@@ -55,7 +55,7 @@ class WappViewModel(application: Application) : AndroidViewModel(application) {
         val baseDir = Environment.getExternalStorageDirectory().absolutePath
         val pm = context.packageManager
 
-        // Check if WhatsApp is installed
+        // Check if WApp is installed
         val whatsappInstalled = try {
             pm.getPackageInfo("com.whatsapp", PackageManager.GET_ACTIVITIES)
             true
@@ -63,7 +63,7 @@ class WappViewModel(application: Application) : AndroidViewModel(application) {
             false
         }
 
-        // Check if WhatsApp Business is installed
+        // Check if WApp Business is installed
         val whatsappBusinessInstalled = try {
             pm.getPackageInfo("com.whatsapp.w4b", PackageManager.GET_ACTIVITIES)
             true
@@ -71,26 +71,26 @@ class WappViewModel(application: Application) : AndroidViewModel(application) {
             false
         }
 
-        Log.d(TAG, "WhatsApp installed: $whatsappInstalled")
-        Log.d(TAG, "WhatsApp Business installed: $whatsappBusinessInstalled")
+        Log.d(TAG, "WApp installed: $whatsappInstalled")
+        Log.d(TAG, "WApp Business installed: $whatsappBusinessInstalled")
 
         if (whatsappInstalled) {
-            // Primary WhatsApp status paths
+            // Primary WApp status paths
             whatsappPaths.addAll(listOf(
-                // New WhatsApp status path (Android 11+)
-                "$baseDir/Android/media/com.whatsapp/WhatsApp/Media/.Statuses",
-                // Legacy WhatsApp status path
-                "$baseDir/WhatsApp/Media/.Statuses"
+                // New WApp status path (Android 11+)
+                "$baseDir/Android/media/com.whatsapp/WApp/Media/.Statuses",
+                // Legacy WApp status path
+                "$baseDir/WApp/Media/.Statuses"
             ))
         }
 
         if (whatsappBusinessInstalled) {
-            // WhatsApp Business status paths
+            // WApp Business status paths
             whatsappPaths.addAll(listOf(
-                // New WhatsApp Business status path (Android 11+)
-                "$baseDir/Android/media/com.whatsapp.w4b/WhatsApp Business/Media/.Statuses",
-                // Legacy WhatsApp Business status path
-                "$baseDir/WhatsApp Business/Media/.Statuses"
+                // New WApp Business status path (Android 11+)
+                "$baseDir/Android/media/com.whatsapp.w4b/WApp Business/Media/.Statuses",
+                // Legacy WApp Business status path
+                "$baseDir/WApp Business/Media/.Statuses"
             ))
         }
 

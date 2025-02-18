@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Bottom shadow -->
+    <path
+        android:pathData="M54,31 A26,26 0 1,0 54,83 A26,26 0 1,0 54,31"
+        android:fillColor="#20000000"/>
+
+    <!-- Right shadow -->
+    <path
+        android:pathData="M80,54 A26,26 0 0,1 54,80 A26,26 0 0,1 54,28 A26,26 0 0,1 80,54"
+        android:fillColor="#15000000"/>
+
+    <!-- Main circle -->
+    <path
+        android:pathData="M54,28 A26,26 0 1,0 54,80 A26,26 0 1,0 54,28">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="radial"
+                android:centerX="44"
+                android:centerY="44"
+                android:gradientRadius="45">
+                <item android:offset="0" android:color="#FF2FD66D"/>
+                <item android:offset="1" android:color="#FF25D366"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Top left highlight -->
+    <path
+        android:pathData="M54,28 C42,28 32,35 28,45 A26,26 0 0,1 54,28"
+        android:fillColor="#33FFFFFF"/>
+
+    <!-- Bottom right shadow -->
+    <path
+        android:pathData="M54,80 C66,80 76,73 80,63 A26,26 0 0,1 54,80"
+        android:fillColor="#15000000"/>
+
+    <!-- Download arrow with embossed effect -->
+    <group>
+        <!-- Shadow -->
+        <path
+            android:fillColor="#20000000"
+            android:pathData="M55,43 L55,63 L49,57 L55,63 L61,57 L55,63 L55,43 M45,66 L65,66"
+            android:strokeColor="#20000000"
+            android:strokeWidth="3"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round"/>
+        <!-- Main arrow -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M54,42 L54,62 L48,56 L54,62 L60,56 L54,62 L54,42 M44,65 L64,65"
+            android:strokeColor="#FFFFFF"
+            android:strokeWidth="3"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round"/>
+    </group>
+</vector> 

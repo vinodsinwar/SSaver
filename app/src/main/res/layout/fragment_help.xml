@@ -4,20 +4,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    android:scrollbars="vertical"
+    android:fadeScrollbars="false"
+    android:background="@color/light_background">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:paddingHorizontal="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="24dp"
+        android:clipToPadding="false">
 
+        <!-- Introduction Card -->
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
-            app:cardElevation="2dp"
-            app:cardCornerRadius="8dp">
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="#E7F3E7"
+            app:cardCornerRadius="12dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -30,24 +38,27 @@
                     android:layout_height="wrap_content"
                     android:text="@string/help_welcome_title"
                     android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
-                    android:textColor="?attr/colorPrimary"
+                    android:textColor="@color/primary"
                     android:layout_marginBottom="8dp"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/help_welcome_description"
-                    android:textAppearance="@style/TextAppearance.Material3.BodyMedium"/>
+                    android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+                    android:textColor="@color/primary_dark"/>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
+        <!-- Understanding Interface -->
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/faq_how_to_save"
+            android:id="@+id/faq_interface"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
-            app:cardElevation="2dp"
-            app:cardCornerRadius="8dp">
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="#F5F5F5"
+            app:cardCornerRadius="12dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -55,7 +66,7 @@
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:id="@+id/header_how_to_save"
+                    android:id="@+id/header_interface"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -67,34 +78,38 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/help_how_to_save_title"
-                        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"/>
+                        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                        android:textColor="@color/black"/>
 
                     <ImageView
-                        android:id="@+id/arrow_how_to_save"
+                        android:id="@+id/arrow_interface"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:src="@drawable/ic_expand_more"
-                        app:tint="?attr/colorPrimary"/>
+                        app:tint="@color/primary"/>
                 </LinearLayout>
 
                 <TextView
-                    android:id="@+id/content_how_to_save"
+                    android:id="@+id/content_interface"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="16dp"
                     android:visibility="gone"
                     android:text="@string/help_how_to_save_content"
-                    android:textAppearance="@style/TextAppearance.Material3.BodyMedium"/>
+                    android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+                    android:textColor="@color/black"/>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
+        <!-- Saving Images -->
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/faq_permissions"
+            android:id="@+id/faq_images"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
-            app:cardElevation="2dp"
-            app:cardCornerRadius="8dp">
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="#F5F5F5"
+            app:cardCornerRadius="12dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -102,7 +117,7 @@
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:id="@+id/header_permissions"
+                    android:id="@+id/header_images"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -114,34 +129,38 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/help_permissions_title"
-                        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"/>
+                        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                        android:textColor="@color/black"/>
 
                     <ImageView
-                        android:id="@+id/arrow_permissions"
+                        android:id="@+id/arrow_images"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:src="@drawable/ic_expand_more"
-                        app:tint="?attr/colorPrimary"/>
+                        app:tint="@color/primary"/>
                 </LinearLayout>
 
                 <TextView
-                    android:id="@+id/content_permissions"
+                    android:id="@+id/content_images"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="16dp"
                     android:visibility="gone"
                     android:text="@string/help_permissions_content"
-                    android:textAppearance="@style/TextAppearance.Material3.BodyMedium"/>
+                    android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+                    android:textColor="@color/black"/>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
+        <!-- Saving Videos -->
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/faq_not_showing"
+            android:id="@+id/faq_videos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
-            app:cardElevation="2dp"
-            app:cardCornerRadius="8dp">
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="#F5F5F5"
+            app:cardCornerRadius="12dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -149,7 +168,7 @@
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:id="@+id/header_not_showing"
+                    android:id="@+id/header_videos"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -161,24 +180,179 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/help_not_showing_title"
-                        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"/>
+                        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                        android:textColor="@color/black"/>
 
                     <ImageView
-                        android:id="@+id/arrow_not_showing"
+                        android:id="@+id/arrow_videos"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:src="@drawable/ic_expand_more"
-                        app:tint="?attr/colorPrimary"/>
+                        app:tint="@color/primary"/>
                 </LinearLayout>
 
                 <TextView
-                    android:id="@+id/content_not_showing"
+                    android:id="@+id/content_videos"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="16dp"
                     android:visibility="gone"
                     android:text="@string/help_not_showing_content"
-                    android:textAppearance="@style/TextAppearance.Material3.BodyMedium"/>
+                    android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Managing Files -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/faq_manage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="#F5F5F5"
+            app:cardCornerRadius="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/header_manage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:background="?attr/selectableItemBackground">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/help_manage_files_title"
+                        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                        android:textColor="@color/black"/>
+
+                    <ImageView
+                        android:id="@+id/arrow_manage"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_expand_more"
+                        app:tint="@color/primary"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/content_manage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:visibility="gone"
+                    android:text="@string/help_manage_files_content"
+                    android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Troubleshooting -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/faq_troubleshoot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="#F5F5F5"
+            app:cardCornerRadius="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/header_troubleshoot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:background="?attr/selectableItemBackground">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/help_troubleshooting_title"
+                        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                        android:textColor="@color/black"/>
+
+                    <ImageView
+                        android:id="@+id/arrow_troubleshoot"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_expand_more"
+                        app:tint="@color/primary"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/content_troubleshoot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:visibility="gone"
+                    android:text="@string/help_troubleshooting_content"
+                    android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Business Support -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/faq_business"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="#F5F5F5"
+            app:cardCornerRadius="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/header_business"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:background="?attr/selectableItemBackground">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/help_business_title"
+                        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                        android:textColor="@color/black"/>
+
+                    <ImageView
+                        android:id="@+id/arrow_business"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_expand_more"
+                        app:tint="@color/primary"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/content_business"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:visibility="gone"
+                    android:text="@string/help_business_content"
+                    android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+                    android:textColor="@color/black"/>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 

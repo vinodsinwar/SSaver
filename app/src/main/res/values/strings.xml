@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Status Saver</string>
-    <string name="app_title">WhatsApp Status Saver</string>
+    <string name="app_title">WApp Status Saver</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
-    <string name="title_wapp">WhatsApp</string>
+    <string name="title_wapp">WApp</string>
     <string name="title_help">Help</string>
     <string name="title_settings">Settings</string>
     
@@ -13,27 +13,36 @@
     <string name="tab_images">Images</string>
     <string name="tab_videos">Videos</string>
     
-    <!-- Help Section -->
-    <string name="help_welcome_title">Welcome to WhatsApp Status Saver!</string>
-    <string name="help_welcome_description">This app helps you save WhatsApp status updates from your contacts. Below are some frequently asked questions to help you get started.</string>
-    
-    <string name="help_how_to_save_title">How do I save a status?</string>
-    <string name="help_how_to_save_content">1. Open WhatsApp and view the status you want to save\n2. Open Status Saver app\n3. You\'ll see all recent statuses in the Images and Videos tabs\n4. Tap the download button on any status to save it\n5. Find saved statuses in your gallery under the Download/StatusSaver folder</string>
-    
-    <string name="help_permissions_title">Why does the app need permissions?</string>
-    <string name="help_permissions_content">• Storage Permission: Required to access WhatsApp status files and save them to your device\n\n• Media Permission: On Android 13+, needed to access and save images and videos\n\n• Manage Storage Permission: On Android 11+, required to access WhatsApp status folder\n\nWe only use these permissions to provide the core functionality of saving statuses.</string>
-    
-    <string name="help_not_showing_title">Why am I not seeing any statuses?</string>
-    <string name="help_not_showing_content">If you\'re not seeing statuses, check the following:\n\n1. Make sure you\'ve viewed the status in WhatsApp first\n2. Verify all permissions are granted in Settings\n3. For Android 11+, enable "Allow management of all files"\n4. Check if you have WhatsApp or WhatsApp Business installed\n5. Try pulling down to refresh the status list\n\nNote: Statuses older than 24 hours won\'t appear in the app.</string>
+    <!-- Help Screen -->
+    <string name="help_welcome_title">Introduction to WApp Status Saver</string>
+    <string name="help_welcome_description">Welcome to Status Saver! This app helps you easily save and manage status updates from WApp. Learn how to use the app effectively with this guide.</string>
+
+    <string name="help_how_to_save_title">Understanding the Interface</string>
+    <string name="help_how_to_save_content">The app has a simple interface with three main sections:\n\n1. Recent Status: View and save recent status updates\n2. Saved Status: Access your saved status files\n3. Settings: Configure app preferences</string>
+
+    <string name="help_permissions_title">Saving Status Images</string>
+    <string name="help_permissions_content">To save status images:\n\n1. Open the app and view recent statuses\n2. Tap on any image to preview\n3. Click the download button to save\n4. Find saved images in your gallery</string>
+
+    <string name="help_not_showing_title">Saving Status Videos</string>
+    <string name="help_not_showing_content">To save status videos:\n\n1. Open the app and switch to video tab\n2. Tap on any video to preview\n3. Click the download button to save\n4. Find saved videos in your gallery</string>
+
+    <string name="help_manage_files_title">Managing Saved Files</string>
+    <string name="help_manage_files_content">You can manage your saved files by:\n\n1. Going to the Saved tab\n2. Long press to select multiple files\n3. Use the share or delete options\n4. Find all saved files in your gallery</string>
+
+    <string name="help_troubleshooting_title">Troubleshooting</string>
+    <string name="help_troubleshooting_content">Common issues and solutions:\n\n1. No statuses showing? Grant storage permissions\n2. Can\'t save? Check available storage space\n3. App crashes? Clear cache and restart\n4. Still having issues? Contact support</string>
+
+    <string name="help_business_title">WApp Business Support</string>
+    <string name="help_business_content">This app also supports WApp Business:\n\n1. Works the same way as regular WApp\n2. Automatically detects Business statuses\n3. Saves to the same location\n4. All features work identically</string>
     
     <!-- Permissions -->
     <string name="permission_required">Storage Permission Required</string>
-    <string name="permission_message">This app needs storage permission to access and save WhatsApp statuses</string>
+    <string name="permission_message">This app needs storage permission to access and save WApp statuses</string>
     <string name="grant_permission">Grant Permission</string>
     <string name="manage_storage_permission_title">All Files Access Required</string>
-    <string name="manage_storage_permission_message">Android 10 and above requires special permission to access WhatsApp statuses. Please enable \"Allow management of all files\" in the next screen.</string>
+    <string name="manage_storage_permission_message">Android 10 and above requires special permission to access WApp statuses. Please enable \"Allow management of all files\" in the next screen.</string>
     <string name="storage_permission_title">Storage Access Required</string>
-    <string name="storage_permission_message">This app needs storage access to read WhatsApp statuses and save them. Please grant the permission to continue.</string>
+    <string name="storage_permission_message">This app needs storage access to read WApp statuses and save them. Please grant the permission to continue.</string>
     <string name="open_settings">Open Settings</string>
     <string name="cancel">Cancel</string>
     

@@ -59,7 +59,7 @@ class SettingsFragment : Fragment() {
         binding.aboutButton.setOnClickListener {
             MaterialAlertDialogBuilder(requireContext())
                 .setTitle("About")
-                .setMessage("Status Saver\nVersion 1.0\n\nA simple app to save WhatsApp statuses.")
+                .setMessage("Status Saver\nVersion 1.0\n\nA simple app to save WApp statuses.")
                 .setPositiveButton("OK", null)
                 .show()
         }

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Outer ripple -->
+    <path
+        android:pathData="M54,25 A29,29 0 1,0 54,83 A29,29 0 1,0 54,25"
+        android:fillColor="#1025D366"/>
+
+    <!-- Middle ripple -->
+    <path
+        android:pathData="M54,27 A27,27 0 1,0 54,81 A27,27 0 1,0 54,27"
+        android:fillColor="#2025D366"/>
+        
+    <!-- Main circle -->
+    <path
+        android:pathData="M54,29 A25,25 0 1,0 54,79 A25,25 0 1,0 54,29">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="radial"
+                android:centerX="54"
+                android:centerY="54"
+                android:gradientRadius="25">
+                <item android:offset="0" android:color="#FF2AC669"/>
+                <item android:offset="1" android:color="#FF25D366"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Download arrow with enhanced style -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,40 L54,60 L48,54 L54,60 L60,54 L54,60 L54,40 M44,63 L64,63"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="3.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"/>
+
+    <!-- Shine effect -->
+    <path
+        android:pathData="M54,29 C65,29 74,34 79,42 A25,25 0 0,0 54,29"
+        android:fillColor="#33FFFFFF"/>
+</vector> 
