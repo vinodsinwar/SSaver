@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- WhatsApp color scheme -->
+    <color name="primary">#128C7E</color>
+    <color name="primary_dark">#075E54</color>
+    <color name="primary_light">#25D366</color>
+    <color name="secondary">#25D366</color>
+    <color name="secondary_dark">#128C7E</color>
+    <color name="accent">#34B7F1</color>
+    
+    <!-- Base colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="dark_background">#121B22</color>
+    <color name="light_background">#FFFFFF</color>
+    
+    <!-- Status colors -->
+    <color name="success">#25D366</color>
+    <color name="error">#DC3545</color>
+</resources>
